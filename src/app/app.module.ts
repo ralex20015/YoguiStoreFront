@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterEmpleadosComponent } from './auth/register-empleados/register-empleados.component';
 import { RegisterClientesComponent } from './auth/register-clientes/register-clientes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { RegisterClientesComponent } from './auth/register-clientes/register-cli
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

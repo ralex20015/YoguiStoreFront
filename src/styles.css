@@ -4,7 +4,16 @@ p{
     font-family: 'Dongle', sans-serif;
     font-size: xx-large;
 }
-*{
-    color: white;
-    background-color: #1D2D44;
-}
+
+html, body {
+    min-width: 320px;
+    background-color: #1285d1;;
+    margin: 0;
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
