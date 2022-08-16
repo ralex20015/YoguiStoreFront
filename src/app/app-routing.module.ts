@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArticulosVistaComponent } from './articulos/articulos-vista/articulos-vista.component';
 import { RegisterArticuloComponent } from './articulos/register-articulo/register-articulo.component';
 import { LoginUsuariosComponent } from './auth/login-usuarios/login-usuarios.component';
 import { RegisterClientesComponent } from './auth/register-clientes/register-clientes.component';
@@ -37,6 +38,10 @@ const routes: Routes = [
     path: 'carrito',
     component: CarritoComponent
   },*/
+  {
+    path: 'articulo',
+    component: ArticulosVistaComponent
+  },
   {
     path: '**',
     component: NotFoundComponent

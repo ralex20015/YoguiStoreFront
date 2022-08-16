@@ -1,1 +1,17 @@
-<p>articulo works!</p>
+<div class="body">
+  <div class="container">
+    <div class="row" *ngFor="let item of articulosArray">
+      <div class="card">
+        <img src="{{ item.imagen }}" alt="" />
+        <h4>{{ item.nombre }}</h4>
+        <p><b>Modelo: </b>{{ item.modelo }}</p>
+        <p><b>Talla: </b>{{ item.talla }}</p>
+        <p><b>Marca: </b>{{ item.marca }}</p>
+        <p><b>Precio: </b>${{ item.precio }}</p>
+        <p><b>Disponibles: </b>{{ item.stock }}</p>
+        <p></p>
+        <a href="#" class="btn">Ordenar</a>
+      </div>
+    </div>
+  </div>
+</div>

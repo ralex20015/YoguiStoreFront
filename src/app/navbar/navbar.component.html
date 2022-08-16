@@ -2,9 +2,10 @@
   <a>Yogui Store</a>
   <div>
     <a routerLink="home">Home</a>
-    <a routerLink="articulo">Articulos</a>
-    <a routerLink="login">Login</a>
-    <a routerLink="registro-cliente">Registro</a>
-    <a routerLink="registro-empleado">Empleados</a>
+    <a routerLink="articulo" *ngIf="number == 1 || number == 2">Articulos</a>
+    <a routerLink="login" *ngIf="number == 0">Login</a>
+    <a routerLink="registro-cliente" *ngIf="number == 0">Registro</a>
+    <a routerLink="registro-empleado" *ngIf="number == 1">Empleados</a>
+    <a (click)="logOut()" *ngIf="number != 0">Cerrar Sesion</a>
   </div>
 </mat-toolbar>

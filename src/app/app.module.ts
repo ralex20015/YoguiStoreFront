@@ -14,7 +14,8 @@ import { RegisterEmpleadosComponent } from './auth/register-empleados/register-e
 import { RegisterClientesComponent } from './auth/register-clientes/register-clientes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './shared/shared.module';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,9 @@ import { AngularMaterialModule } from './shared/shared.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
