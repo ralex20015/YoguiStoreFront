@@ -40,7 +40,11 @@ const routes: Routes = [
     component: CarritoComponent
   },*/
   {
-    path: 'articulo',
+    path: 'articulos',
+    component: ArticulosVistaComponent
+  },
+  {
+    path: 'articulo/:id',
     component: ArticulosVistaComponent
   }, {
     path: 'nosotros',

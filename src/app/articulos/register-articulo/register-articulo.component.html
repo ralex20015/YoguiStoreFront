@@ -1,1 +1,29 @@
-<p>register-articulo works!</p>
+<div class="justify-content-center align-items-center">
+  <div class="col-auto p-5 local">
+    <div class="login-box">
+      <form [formGroup]="form">
+        <h2>Iniciar Sesion</h2>
+        <div class="user-box">
+          <input type="text" name="correo" required formControlName="correo" />
+          <label>Correo</label>
+        </div>
+        <div class="user-box">
+          <input
+            type="password"
+            name=""
+            required
+            formControlName="contrasena"
+          />
+          <label>Contraseña</label>
+        </div>
+        <a>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Entrar <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </form>
+    </div>
+  </div>
+</div>

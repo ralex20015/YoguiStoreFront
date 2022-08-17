@@ -13,7 +13,7 @@ export class LoginUsuariosComponent implements OnInit {
   form: FormGroup;
   constructor(private loginService: LoginService, private fb: FormBuilder, private router: Router) {
     this.form = this.fb.group({
-      correo: ['', [Validators.required]],
+      correo: ['', [Validators.required, Validators.email]],
       contrasena: ['', [Validators.required]]
     })
   }
@@ -23,9 +23,10 @@ export class LoginUsuariosComponent implements OnInit {
       this.router.navigateByUrl('home');
     }
   }
-
+  get f() {
+    return this.form.controls;
+  }
   login() {
-    console.log(this.form.value);
     this.loginService.loginUsuario(this.form.value).subscribe((res: any) => {
       if (res.message == 'Usuario o contrasena incorrectos') {
         window.alert('El correo o la contraseña son incorrectos');
