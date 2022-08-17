@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     NavbarComponent,
     RegisterEmpleadosComponent,
-    RegisterClientesComponent
+    RegisterClientesComponent,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,

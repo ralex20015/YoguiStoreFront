@@ -6,6 +6,7 @@ import { LoginUsuariosComponent } from './auth/login-usuarios/login-usuarios.com
 import { RegisterClientesComponent } from './auth/register-clientes/register-clientes.component';
 import { RegisterEmpleadosComponent } from './auth/register-empleados/register-empleados.component';
 import { HomeComponent } from './home/home.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
@@ -41,6 +42,9 @@ const routes: Routes = [
   {
     path: 'articulo',
     component: ArticulosVistaComponent
+  }, {
+    path: 'nosotros',
+    component: NosotrosComponent
   },
   {
     path: '**',

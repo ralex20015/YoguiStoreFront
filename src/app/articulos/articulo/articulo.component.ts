@@ -12,8 +12,14 @@ export class ArticuloComponent implements OnInit {
   articulosArray: any = [];
   ngOnInit(): void {
     this.articulos.getArticulos().subscribe((res: any) => {
-      this.articulosArray = res;
-      console.log(this.articulosArray);
+      if (res.message) {
+        //
+        console.log(this.articulosArray);
+      } else {
+        this.articulosArray = res;
+        console.log(this.articulosArray);
+      }
+
     });
   }
 

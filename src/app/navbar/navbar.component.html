@@ -6,6 +6,7 @@
     <a routerLink="login" *ngIf="number == 0">Login</a>
     <a routerLink="registro-cliente" *ngIf="number == 0">Registro</a>
     <a routerLink="registro-empleado" *ngIf="number == 1">Empleados</a>
+    <a routerLink="nosotros">Nosotros</a>
     <a (click)="logOut()" *ngIf="number != 0">Cerrar Sesion</a>
   </div>
 </mat-toolbar>
