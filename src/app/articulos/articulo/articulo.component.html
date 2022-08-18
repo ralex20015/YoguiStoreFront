@@ -14,8 +14,10 @@
           <p><b>Marca: </b>{{ item.marca }}</p>
           <p><b>Precio: </b>{{ item.precio | currency: "MXN":"symbol" }}</p>
           <a (click)="go(item.id_articulo)" class="btn">Ver mas</a>
-          <a class="btn-delete" (click)="delete(item.id_articulo)">Eliminar</a>
-          <a class="btn-update" (click)="update(item.id_articulo)"
+          <a class="btn-delete" *ngIf="admin" (click)="delete(item.id_articulo)"
+            >Eliminar</a
+          >
+          <a class="btn-update" *ngIf="admin" (click)="update(item.id_articulo)"
             >Actualizar</a
           >
         </div>

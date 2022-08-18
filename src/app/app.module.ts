@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { EditArticuloComponent } from './articulos/edit-articulo/edit-articulo.component';
+import { CarritoComponent } from './carrito/carrito.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { EditArticuloComponent } from './articulos/edit-articulo/edit-articulo.c
     RegisterEmpleadosComponent,
     RegisterClientesComponent,
     NosotrosComponent,
-    EditArticuloComponent
+    EditArticuloComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

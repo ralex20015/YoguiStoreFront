@@ -9,7 +9,7 @@
       <li>Talla: {{ resp.talla }} cm</li>
       <li>Precio: {{ resp.precio | currency: "MXN" }}</li>
     </ul>
-    <button *ngIf="showButton">
+    <button *ngIf="showButton && resp.stock > 0" (click)="add()">
       <span></span>
       <span></span>
       <span></span>

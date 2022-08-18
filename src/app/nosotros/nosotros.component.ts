@@ -32,11 +32,11 @@ export class NosotrosComponent implements OnInit {
     this.map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [-103.29341530797083, 20.689124263708727], // starting position
+      center: [-103.29408674618514, 20.688671312807156], // starting position
       zoom: 16 // starting zoom
     });
     const marker = new mapboxgl.Marker()
-      .setLngLat([-103.29341530797083, 20.689124263708727])
+      .setLngLat([-103.29408674618514, 20.688671312807156])
       .addTo(this.map);
     const geocoder = new MapboxGeocoder({ // Initialize the geocoder
       accessToken: mapboxgl.accessToken, // Set the access token

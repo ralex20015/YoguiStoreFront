@@ -6,6 +6,7 @@ import { RegisterArticuloComponent } from './articulos/register-articulo/registe
 import { LoginUsuariosComponent } from './auth/login-usuarios/login-usuarios.component';
 import { RegisterClientesComponent } from './auth/register-clientes/register-clientes.component';
 import { RegisterEmpleadosComponent } from './auth/register-empleados/register-empleados.component';
+import { CarritoComponent } from './carrito/carrito.component';
 import { HomeComponent } from './home/home.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -42,10 +43,10 @@ const routes: Routes = [
     path: 'actualizar/:id',
     component: EditArticuloComponent
   },
-  /*{
+  {
     path: 'carrito',
     component: CarritoComponent
-  },*/
+  },
   {
     path: 'nosotros',
     component: NosotrosComponent
