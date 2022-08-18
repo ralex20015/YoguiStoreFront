@@ -28,7 +28,7 @@ export class ArticuloComponent implements OnInit {
 
     });
   }
-  user;
+  user = '';
   go(id) {
     this.router.navigateByUrl('articulo/' + id);
   }

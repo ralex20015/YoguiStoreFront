@@ -35,7 +35,7 @@ export class PedidosComponent implements OnInit {
 
     });
   }
-
+  user = '';
 
   update(id, estatus) {
     let u = {

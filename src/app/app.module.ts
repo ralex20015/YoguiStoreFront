@@ -21,6 +21,7 @@ import { EditArticuloComponent } from './articulos/edit-articulo/edit-articulo.c
 import { CarritoComponent } from './carrito/carrito.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { NombrePipe } from './nombre.pipe';
+import { IdPipe } from './id.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { NombrePipe } from './nombre.pipe';
     EditArticuloComponent,
     CarritoComponent,
     PedidosComponent,
-    NombrePipe
+    NombrePipe,
+    IdPipe
   ],
   imports: [
     BrowserModule,

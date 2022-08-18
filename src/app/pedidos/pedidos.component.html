@@ -5,8 +5,20 @@
     </div>
   </div>
   <div class="padre">
+    <div class="container2">
+      <mat-form-field class="col-md-4 col-sm-4">
+        <mat-label>Id del pedido</mat-label>
+        <input
+          matInput
+          placeholder="Ingrese el id del pedido"
+          [(ngModel)]="user"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="padre">
     <div class="container">
-      <div class="row" *ngFor="let item of articulosArray">
+      <div class="row" *ngFor="let item of articulosArray | id: user">
         <div class="card">
           <img src="{{ item.imagen }}" alt="" />
           <h4>{{ item.nombre }}</h4>
