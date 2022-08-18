@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { EditArticuloComponent } from './articulos/edit-articulo/edit-articulo.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { NombrePipe } from './nombre.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { CarritoComponent } from './carrito/carrito.component';
     RegisterClientesComponent,
     NosotrosComponent,
     EditArticuloComponent,
-    CarritoComponent
+    CarritoComponent,
+    PedidosComponent,
+    NombrePipe
   ],
   imports: [
     BrowserModule,

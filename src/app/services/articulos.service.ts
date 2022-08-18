@@ -33,4 +33,13 @@ export class ArticulosService {
     console.log(id);
     return this.http.put(this.url + 'articulo/empleado/' + id, articulo);
   }
+  getPedidos() {
+    return this.http.get(this.url + 'pedidos');
+  }
+  getStatus() {
+    return this.http.get(this.url + 'estatus');
+  }
+  setStatus(id: any) {
+    return this.http.put(this.url + 'estatus/' + id.id, id);
+  }
 }

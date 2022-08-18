@@ -10,6 +10,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { HomeComponent } from './home/home.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,9 @@ const routes: Routes = [
   {
     path: 'nosotros',
     component: NosotrosComponent
+  }, {
+    path: 'pedidos',
+    component: PedidosComponent
   },
   {
     path: '**',

@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ArticulosService } from 'src/app/services/articulos.service';
+
+import { ArticulosService } from '../services/articulos.service';
 
 @Component({
-  selector: 'app-articulo',
-  templateUrl: './articulo.component.html',
-  styleUrls: ['./articulo.component.css']
+  selector: 'app-pedidos',
+  templateUrl: './pedidos.component.html',
+  styleUrls: ['./pedidos.component.css']
 })
-export class ArticuloComponent implements OnInit {
+export class PedidosComponent implements OnInit {
+  estatus: any;
+
 
   constructor(private articulos: ArticulosService, private router: Router) { }
   articulosArray: any = [];
@@ -17,7 +20,11 @@ export class ArticuloComponent implements OnInit {
       this.admin = true;
       console.log('true');
     }
-    this.articulos.getArticulos().subscribe((res: any) => {
+    this.articulos.getStatus().subscribe((res: any) => {
+      this.estatus = res;
+      console.log(this.estatus);
+    })
+    this.articulos.getPedidos().subscribe((res: any) => {
       if (res.message) {
         //
         console.log(this.articulosArray);
@@ -28,22 +35,17 @@ export class ArticuloComponent implements OnInit {
 
     });
   }
-  user;
-  go(id) {
-    this.router.navigateByUrl('articulo/' + id);
-  }
-  delete(id) {
-    console.log(id);
-    const articulo = {
-      id_articulo: id
-    }
-    this.articulos.deleteArticulo(id).subscribe((res: any) => {
-      window.alert(res.message);
-      window.location.reload();
-    });
 
+
+  update(id, estatus) {
+    let u = {
+      id: id,
+      id_estatus: estatus
+    }
+    console.log(u);
+    this.articulos.setStatus(u).subscribe((res: any) => {
+      window.alert(res.message);
+    });
   }
-  update(id) {
-    this.router.navigateByUrl('actualizar/' + id);
-  }
+
 }
