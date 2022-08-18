@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
   logOut() {
     localStorage.removeItem('id_usuario');
     localStorage.removeItem('tipo_usuario');
+    this.number = 5;
     this.router.navigateByUrl('login');
-    window.location.reload();
   }
 }
