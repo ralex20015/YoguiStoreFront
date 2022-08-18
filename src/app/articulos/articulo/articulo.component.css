@@ -41,7 +41,7 @@ h1{
 }
 .card{
     margin: 10px 10px;
-    background: #fff;
+    background: rgb(201, 195, 195);
     box-shadow: 0 0 15px rgba(0,0,.0,0.4);
     padding: 10px 20px;
     flex-wrap: wrap;

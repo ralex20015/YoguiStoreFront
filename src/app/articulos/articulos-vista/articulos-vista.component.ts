@@ -16,9 +16,12 @@ export class ArticulosVistaComponent implements OnInit {
   }
 
   resp;
+  showButton = false;
   expression: boolean = false;
   ngOnInit(): void {
-
+    if (localStorage.getItem('tipo_usuario') == '2') {
+      this.showButton = true;
+    }
     this.id = this.router.url.slice(10);
     this.articuloService.getArticulo(this.id).subscribe((res: any) => {
       this.resp = res;
