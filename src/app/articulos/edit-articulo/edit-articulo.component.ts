@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ArticulosService } from 'src/app/services/articulos.service';
 
 @Component({
-  selector: 'app-register-articulo',
-  templateUrl: './register-articulo.component.html',
-  styleUrls: ['./register-articulo.component.css']
+  selector: 'app-edit-articulo',
+  templateUrl: './edit-articulo.component.html',
+  styleUrls: ['./edit-articulo.component.css']
 })
-export class RegisterArticuloComponent implements OnInit {
+export class EditArticuloComponent implements OnInit {
+
   form: FormGroup;
-  constructor(private articuloService: ArticulosService, private fb: FormBuilder, private router: Router) {
+  id: string;
+  constructor(private articuloService: ArticulosService, private fb: FormBuilder, private router: Router, private activedRoute: ActivatedRoute) {
+
     this.form = this.fb.group({
       id_modelo: ['', [Validators.required]],
       id_marca: ['', [Validators.required]],
@@ -24,7 +27,8 @@ export class RegisterArticuloComponent implements OnInit {
   modelos = [];
   marcas = [];
   tallas = [];
-
+  resp;
+  expression: boolean = false;
   ngOnInit(): void {
     this.articuloService.getTallas().subscribe((pos: any) => {
       this.tallas = pos;
@@ -36,6 +40,13 @@ export class RegisterArticuloComponent implements OnInit {
     this.articuloService.getModelos().subscribe((pos: any) => {
       this.modelos = pos;
     });
+
+    this.id = this.router.url.slice(12);
+    this.articuloService.getArticulo(this.id).subscribe((res: any) => {
+      this.resp = res;
+      console.log(this.resp);
+      this.expression = true;
+    })
   }
   get f() {
     return this.form.controls;
@@ -44,10 +55,9 @@ export class RegisterArticuloComponent implements OnInit {
 
   confirmar() {
     console.log(this.form.value);
-    this.articuloService.postArticulo(this.form.value).subscribe((res: any) => {
+    this.articuloService.updateArticulo(this.id, this.form.value).subscribe((res: any) => {
       window.alert(res.message);
       this.router.navigateByUrl('home');
     });
   }
-
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArticulosVistaComponent } from './articulos/articulos-vista/articulos-vista.component';
+import { EditArticuloComponent } from './articulos/edit-articulo/edit-articulo.component';
 import { RegisterArticuloComponent } from './articulos/register-articulo/register-articulo.component';
 import { LoginUsuariosComponent } from './auth/login-usuarios/login-usuarios.component';
 import { RegisterClientesComponent } from './auth/register-clientes/register-clientes.component';
@@ -32,21 +33,20 @@ const routes: Routes = [
     component: RegisterClientesComponent
   },
   {
-    path: 'register-articulo',
+    path: 'register-articulos',
     component: RegisterArticuloComponent
+  }, {
+    path: 'articulo/:id',
+    component: ArticulosVistaComponent
+  }, {
+    path: 'actualizar/:id',
+    component: EditArticuloComponent
   },
   /*{
     path: 'carrito',
     component: CarritoComponent
   },*/
   {
-    path: 'articulos',
-    component: ArticulosVistaComponent
-  },
-  {
-    path: 'articulo/:id',
-    component: ArticulosVistaComponent
-  }, {
     path: 'nosotros',
     component: NosotrosComponent
   },

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ArticulosService } from 'src/app/services/articulos.service';
 
 @Component({
@@ -8,9 +9,14 @@ import { ArticulosService } from 'src/app/services/articulos.service';
 })
 export class ArticuloComponent implements OnInit {
 
-  constructor(private articulos: ArticulosService) { }
+  constructor(private articulos: ArticulosService, private router: Router) { }
   articulosArray: any = [];
+  admin: boolean = false;
   ngOnInit(): void {
+    if (localStorage.getItem('tipo_usuario') == "1") {
+      this.admin = true;
+      console.log('true');
+    }
     this.articulos.getArticulos().subscribe((res: any) => {
       if (res.message) {
         //
@@ -22,5 +28,21 @@ export class ArticuloComponent implements OnInit {
 
     });
   }
+  go(id) {
+    this.router.navigateByUrl('articulo/' + id);
+  }
+  delete(id) {
+    console.log(id);
+    const articulo = {
+      id_articulo: id
+    }
+    this.articulos.deleteArticulo(id).subscribe((res: any) => {
+      window.alert(res.message);
+      window.location.reload();
+    });
 
+  }
+  update(id) {
+    this.router.navigateByUrl('actualizar/' + id);
+  }
 }

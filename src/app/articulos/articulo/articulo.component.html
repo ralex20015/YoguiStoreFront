@@ -1,14 +1,24 @@
-<div class="body">
-  <div class="container">
-    <div class="row" *ngFor="let item of articulosArray">
-      <div class="card">
-        <img src="{{ item.imagen }}" alt="" />
-        <h4>{{ item.nombre }}</h4>
-        <p><b>Modelo: </b>{{ item.modelo }}</p>
-        <p><b>Marca: </b>{{ item.marca }}</p>
-        <p><b>Precio: </b>${{ item.precio }}</p>
-        <p></p>
-        <a routerLink="articulo/:id" class="btn">Ver mas</a>
+<div class="abue">
+  <div class="padre">
+    <div class="container2">
+      <h1>Productos</h1>
+    </div>
+  </div>
+  <div class="padre">
+    <div class="container">
+      <div class="row" *ngFor="let item of articulosArray">
+        <div class="card">
+          <img src="{{ item.imagen }}" alt="" />
+          <h4>{{ item.nombre }}</h4>
+          <p><b>Modelo: </b>{{ item.modelo }}</p>
+          <p><b>Marca: </b>{{ item.marca }}</p>
+          <p><b>Precio: </b>${{ item.precio }}</p>
+          <a (click)="go(item.id_articulo)" class="btn">Ver mas</a>
+          <a class="btn-delete" (click)="delete(item.id_articulo)">Eliminar</a>
+          <a class="btn-update" (click)="update(item.id_articulo)"
+            >Actualizar</a
+          >
+        </div>
       </div>
     </div>
   </div>

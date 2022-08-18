@@ -17,6 +17,7 @@ import { AngularMaterialModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { EditArticuloComponent } from './articulos/edit-articulo/edit-articulo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     NavbarComponent,
     RegisterEmpleadosComponent,
     RegisterClientesComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    EditArticuloComponent
   ],
   imports: [
     BrowserModule,
