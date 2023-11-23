@@ -5,10 +5,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CarritoService {
-  url: string = 'http://localhost:4000/carrito';
-  url2: string = 'http://localhost:4000/articulo-carrito';
-  url3: string = 'http://localhost:4000/pedido';
-  url4: string = 'http://localhost:4000/correo';
+  url: string = 'https://yogui-commerce.onrender.com/carrito';
+  url2: string = 'https://yogui-commerce.onrender.com/articulo-carrito';
+  url3: string = 'https://yogui-commerce.onrender.com/pedido';
+  url4: string = 'https://yogui-commerce.onrender.com/correo';
   constructor(private http: HttpClient) { }
 
   verificacion(id: any) {

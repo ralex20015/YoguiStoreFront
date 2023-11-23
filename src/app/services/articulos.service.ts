@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ArticulosService {
-  url = 'http://localhost:4000/'
+  url = 'https://yogui-commerce.onrender.com/'
   constructor(private http: HttpClient) { }
   getArticulo(id) {
     return this.http.get(this.url + 'articulo/' + id);

@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoginService {
-  url: string = 'http://localhost:4000/usuario/login';
-  url2: string = 'http://localhost:4000/usuario/cliente';
-  url3: string = 'http://localhost:4000/usuario';
+  url: string = 'https://yogui-commerce.onrender.com/usuario/login';
+  url2: string = 'https://yogui-commerce.onrender.com/cliente';
+  url3: string = 'https://yogui-commerce.onrender.com/usuario';
   numero = 0;
   constructor(private http: HttpClient) {
 
